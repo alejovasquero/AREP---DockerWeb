@@ -72,6 +72,24 @@ Usamos nuestra base de datos
 > db.createCollection("CodesCollection")
 ```
 
+Vamos a crear las instancias de servicios de logging por medio de la creación de contenedores basados en imágenes.
+
+```console
+docker build --tag docker-arep:first .
+```
+
+Ahora vamos a crear 3 contenedores.
+
+```console
+docker run -dp 36000:6000 --name logging-first docker-arep:first
+docker run -dp 36001:6000 --name logging-second docker-arep:first
+docker run -dp 36002:6000 --name logging-third docker-arep:first
+```
+
+### Despliegue en AWS
+
+
+
 ## Construido con
 
 * [Maven](https://maven.apache.org/) - Manejo de dependencias

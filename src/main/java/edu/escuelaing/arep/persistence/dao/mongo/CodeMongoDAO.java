@@ -28,7 +28,7 @@ public class CodeMongoDAO implements CodeDAO {
     private static ObjectMapper JSON_MAPPER = new ObjectMapper();
 
     {
-        uri = new MongoClientURI("mongodb://localhost:27017");
+        uri = new MongoClientURI("mongodb://172.18.0.1:27017");
         mongoClient = new MongoClient(uri);
         db = mongoClient.getDatabase("CODES");
     }
@@ -54,7 +54,7 @@ public class CodeMongoDAO implements CodeDAO {
                 ans.add(m);
             }
         } catch (JsonProcessingException e)  {
-            //
+            e.printStackTrace();
         }
         cursor.close();
         return ans;

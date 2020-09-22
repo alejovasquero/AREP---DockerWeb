@@ -28,6 +28,10 @@ public class Code {
         this.date = date;
     }
 
+    public Code(){
+
+    }
+
     @Override
     public String toString() {
         return content + " at:  " + date;
