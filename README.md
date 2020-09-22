@@ -11,7 +11,7 @@ Estas instrucciones te utilizar la página web, compilar el proyecto y las prueb
 Las instrucciones se limitan a compilación, ejecución y uso. Vamos a ver la manera de hacer que el software funcione
 de manera local y por medio de Amazon Web Services.
 
-### Prerrequisitos
+### Prerrequisitos 
 
 Para instalar y correr exitosamente este proyecto necesitamos:
 * **Java**
