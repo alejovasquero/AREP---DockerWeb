@@ -3,6 +3,8 @@
 Este proyecto consiste en la implementación de una arquitectura de consulta y respuesta
 balanceada de registros de códigos por medio de una página web.
 
+[![Codacy Badge](https://app.codacy.com/project/badge/Grade/c04625b3c71d4d9a85d74496e50b7801)](https://www.codacy.com/manual/alejovasquero/AREP---DockerWeb?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=alejovasquero/AREP---DockerWeb&amp;utm_campaign=Badge_Grade)
+[![CircleCI](https://circleci.com/gh/alejovasquero/AREP---DockerWeb.svg?style=svg)](https://circleci.com/gh/alejovasquero/AREP---DockerWeb)
 ## Empezando
 
 Estas instrucciones te utilizar la página web, compilar el proyecto y las pruebas.

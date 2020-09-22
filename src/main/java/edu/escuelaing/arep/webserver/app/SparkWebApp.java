@@ -8,10 +8,10 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 import java.io.OutputStream;
 import java.net.HttpURLConnection;
-import java.net.ProtocolException;
 import java.net.URL;
 
 import static spark.Spark.*;
+
 public class SparkWebApp {
 
     private static int LOGGING_INDEX= 0;
