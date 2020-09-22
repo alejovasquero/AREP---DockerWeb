@@ -15,8 +15,6 @@ import static spark.Spark.*;
 public class SparkWebApp {
 
     private static int LOGGING_INDEX= 0;
-    private static Object lock = new Object();
-
     private static final String LOGGING_HOST = "http://172.18.0.1:";
     private static final String page = "/codes";
     private static final int STARTING_PORTT = 36000;
@@ -26,7 +24,7 @@ public class SparkWebApp {
     public static void main(String[] args) {
         port(getPort());
         staticFileLocation("/public");
-        post("/codes", (req, res) -> makePost(req, res));
+        post("/codes", (req, res) -> makePost(req));
     }
 
     /**
@@ -40,7 +38,7 @@ public class SparkWebApp {
         return 4567; //returns default port if heroku-port isn't set (i.e. on localhost)
     }
 
-    private static String makePost(Request res, Response resp){
+    private static String makePost(Request res){
         int targetPort = balancer.getNextPort();
         System.out.println(targetPort);
         String code = res.queryParams("code");
