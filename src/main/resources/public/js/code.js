@@ -1,7 +1,7 @@
 var app = (function(){
     var targetUrl = window.location.href;
     var cleanTable = function(){
-        $("#mainTable").find("td[name='info'']").each(function(){
+        $("#mainTable").find("td[name='info']").each(function(){
             $(this).parents("tr").remove();
         });
     };

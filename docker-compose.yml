@@ -3,7 +3,7 @@ services:
   web:
     build:
       context: .
-      dockerfile: DockerfileWeb
+      dockerfile: dockerfiles/Dockerfile
     container_name: web
     ports:
       - "8087:6000"

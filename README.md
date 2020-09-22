@@ -90,7 +90,48 @@ docker run -dp 36002:6000 --name logging-third docker-arep:first
 
 ### Despliegue en AWS
 
+Con el objetivo de usar dockerhub para la descarga de las imágenes, vamos a crear 1 imagen,
+por lo que la descarga de otros archivos la vamos a dejar a git y maven.
 
+Primero vamos a crear la imagen del servicio de log.
+
+```console
+docker build --tag arep-logger:latest .
+docker tag arep-logger alejovasquero/arepdockerapp
+docker push alejovasquero/arepdockerapp
+```
+
+Ahora vamos a descargar nuestro proyecto en AWS e iniciar las demás instancias.
+En AWS - EC2:
+```
+git clone https://github.com/alejovasquero/AREP---DockerWeb
+cd AREP---DockerWeb/
+mvn package
+```
+
+Ahora vamos a configurar los contenedores.
+
+Primero iniciamos el servidor web y la base de datos mongodb.
+
+```
+docker-compose up -d
+```
+
+Ahora vamos a iniciar las 3 instancias de logging.
+
+```
+docker run -dp 36000:6000 --name logging-first alejovasquero/arepdockerapp
+docker run -dp 36001:6000 --name logging-second alejovasquero/arepdockerapp
+docker run -dp 36002:6000 --name logging-third alejovasquero/arepdockerapp
+```
+
+Verificamos que todos los servicios estén corriendo.
+
+![](img/aws-all.PNG)
+
+Ahora abrimos el puerto del servidor web.
+
+![](img/rule.PNG)
 
 ## Construido con
 
