@@ -11,6 +11,9 @@ import static edu.escuelaing.arep.webserver.app.SparkWebApp.getPort;
 import static spark.Spark.port;
 import static spark.Spark.post;
 
+/**
+ * @author Alejandro Vasquez
+ */
 public class LoggerWebServer {
 
 

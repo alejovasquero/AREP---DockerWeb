@@ -1,0 +1,6 @@
+edu.escuelaing.arep.entities
+edu.escuelaing.arep.persistence.dao
+edu.escuelaing.arep.persistence.dao.mongo
+edu.escuelaing.arep.webserver
+edu.escuelaing.arep.webserver.app
+edu.escuelaing.arep.webserver.logger

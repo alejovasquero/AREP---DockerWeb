@@ -1,5 +1,8 @@
 package edu.escuelaing.arep.webserver;
 
+/**
+ * @author Alejandro Vasquez
+ */
 public class RoundBalancer {
     private int initialPort;
     private int hosts;
@@ -10,6 +13,10 @@ public class RoundBalancer {
         this.hosts = hosts;
     }
 
+    /**
+     * Retorna el siguiente puerto a ser utilizado en el ciclo
+     * @return El siguiente puerto a ser utilizado en el ciclo
+     */
     public synchronized int getNextPort(){
         index +=1;
         int ans = initialPort + (index)%hosts;

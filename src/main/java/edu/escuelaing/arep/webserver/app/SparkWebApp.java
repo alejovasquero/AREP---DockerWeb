@@ -12,6 +12,9 @@ import java.net.URL;
 
 import static spark.Spark.*;
 
+/**
+ * @author Alejandro Vasquez
+ */
 public class SparkWebApp {
 
     private static int LOGGING_INDEX= 0;
@@ -38,6 +41,11 @@ public class SparkWebApp {
         return 4567; //returns default port if heroku-port isn't set (i.e. on localhost)
     }
 
+    /**
+     * Realiza un post a uno de los servicios de log
+     * @param res Respuesta con los datos de los códigos a guardar
+     * @return Reespuesta por parte de los servicios de logs
+     */
     private static String makePost(Request res){
         int targetPort = balancer.getNextPort();
         System.out.println(targetPort);
@@ -51,6 +59,13 @@ public class SparkWebApp {
         return ans;
     }
 
+    /**
+     * Envía un mensaje sobre la red a uno de los servicios de log
+     * @param port Puerto al que enviar el mensaje en la máquina
+     * @param code Código a enviar
+     * @return Respuesta con el historial filtrado de códigos
+     * @throws IOException
+     */
     private static String sendMessage(int port, String code) throws IOException {
         System.out.println("HERE  "+ port);
         URL url = new URL(LOGGING_HOST + port +page);

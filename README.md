@@ -5,6 +5,7 @@ balanceada de registros de códigos por medio de una página web.
 
 [![Codacy Badge](https://app.codacy.com/project/badge/Grade/c04625b3c71d4d9a85d74496e50b7801)](https://www.codacy.com/manual/alejovasquero/AREP---DockerWeb?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=alejovasquero/AREP---DockerWeb&amp;utm_campaign=Badge_Grade)
 [![CircleCI](https://circleci.com/gh/alejovasquero/AREP---DockerWeb.svg?style=svg)](https://circleci.com/gh/alejovasquero/AREP---DockerWeb)
+[DESPLIEGUE EN AWS](http://ec2-54-237-2-49.compute-1.amazonaws.com:8087/)
 ## Empezando
 
 Estas instrucciones te utilizar la página web, compilar el proyecto y las pruebas.
@@ -67,13 +68,6 @@ mongo --host localhost --port 27017
 ```
 
 El puerto está especificado en el archivo compose, por lo que es posible cambiarlo.
-Usamos nuestra base de datos
-
-```console
-> use CODES
-> db.createCollection("CodesCollection")
-```
-
 Vamos a crear las instancias de servicios de logging por medio de la creación de contenedores basados en imágenes.
 
 ```console
@@ -132,6 +126,10 @@ Verificamos que todos los servicios estén corriendo.
 Ahora abrimos el puerto del servidor web.
 
 ![](img/rule.PNG)
+
+Ahora tenemos nuestra página web corriendo :stuck_out_tongue_winking_eye:
+
+![](img/result.PNG)
 
 ## Construido con
 

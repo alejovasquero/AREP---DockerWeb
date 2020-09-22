@@ -1,0 +1,1 @@
+packageSearchIndex = [{"l":"edu.escuelaing.arep.entities"},{"l":"edu.escuelaing.arep.persistence.dao"},{"l":"edu.escuelaing.arep.persistence.dao.mongo"},{"l":"edu.escuelaing.arep.webserver"},{"l":"edu.escuelaing.arep.webserver.app"},{"l":"edu.escuelaing.arep.webserver.logger"}]

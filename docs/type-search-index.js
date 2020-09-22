@@ -1,0 +1,1 @@
+typeSearchIndex = [{"p":"edu.escuelaing.arep.entities","l":"Code"},{"p":"edu.escuelaing.arep.persistence.dao","l":"CodeDAO"},{"p":"edu.escuelaing.arep.persistence.dao.mongo","l":"CodeMongoDAO"},{"p":"edu.escuelaing.arep.webserver.logger","l":"LoggerWebServer"},{"p":"edu.escuelaing.arep.webserver","l":"RoundBalancer"},{"p":"edu.escuelaing.arep.webserver.app","l":"SparkWebApp"}]
